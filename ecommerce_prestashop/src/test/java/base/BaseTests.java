@@ -19,21 +19,21 @@ public class BaseTests {
 
 	private static WebDriver driver;
 	protected HomePage homePage;
-	
+
 	@BeforeAll
 	public static void inicializar() {
 		System.setProperty("webdriver.chrome.driver", "//usr//local//share//chromedriver");
 		driver = new ChromeDriver();
 	}
-	
+
 	@BeforeEach
 	public void carregarPaginainicial() {
 		driver.get("https://marcelodebittencourt.com/demoprestashop/");
 		homePage = new HomePage(driver);
 	}
-	
-	public void capturarTela(String nomeTeste, String resultado){
-		//var camera = (TakesScreenshot) driver;
+
+	public void capturarTela(String nomeTeste, String resultado) {
+		// var camera = (TakesScreenshot) driver;
 		TakesScreenshot camera = (TakesScreenshot) driver;
 		File capturaDeTela = camera.getScreenshotAs(OutputType.FILE);
 		try {
@@ -41,12 +41,11 @@ public class BaseTests {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	} 
-	
+	}
+
 	@AfterAll
 	public static void finalizar() {
-	driver.quit();
+		driver.quit();
 	}
 
 }
-

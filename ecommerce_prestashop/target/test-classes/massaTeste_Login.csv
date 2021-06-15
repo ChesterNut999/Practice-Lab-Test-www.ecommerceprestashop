@@ -1,0 +1,3 @@
+nomeTeste;e-mail;password;nomeUsuario;resultado
+loginValido;maurilio.cardoso@teste.com;Pre#2021;Maurilio Cardoso;positivo
+loginInvalido;maurilio.cardoso@teste.com;Pre_2021;Maurilio Cardoso;negativo
